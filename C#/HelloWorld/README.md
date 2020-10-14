@@ -11,7 +11,7 @@ HelloWorld is a .NET sample application written in C#. The example shows how a c
 - shows how assembly information can be used in the source code
 - supports multiple targets starting with .NET 2.0, NET Core 2.0 and NET Standard 2.0
 - demonstrates conditional compilation to emulate missing types
-- has a script to compile from the command line
+- contains scripts for compiling from the command line
 
 ## Use Cases
 
