@@ -5,7 +5,7 @@ services:
     image: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      - MYSQL_ROOT_PASSWORD=root
     volumes:
       - data:/var/lib/mysql
     ports:
