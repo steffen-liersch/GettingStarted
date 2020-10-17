@@ -1,0 +1,39 @@
+version: "3.1"
+
+services:
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - data:/var/lib/mysql
+    ports:
+      - 127.0.0.1:3306:3306
+
+  lighttpd_wp:
+    build: lighttpd_wp
+    depends_on:
+      - mariadb
+    environment:
+      - WP_DB_HOST=mariadb
+      - WP_DB_PORT=3306
+      - WP_DB_NAME=wordpress
+      - WP_DB_USER=root
+      - WP_DB_PASSWORD=root
+    ports:
+      - 127.0.0.1:80:80
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    depends_on:
+      - mariadb
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb:3306
+    ports:
+      - 127.0.0.1:81:80
+
+volumes:
+  data:

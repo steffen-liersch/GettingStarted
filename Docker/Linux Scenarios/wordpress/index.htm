@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Docker Composition for WordPress</title>
+  <link rel="stylesheet" type="text/css" media="all" href="index.css">
+</head>
+<body>
+  <h1>Docker Composition for WordPress</h1>
+  <p>
+    This composition includes the following containers:
+  </p>
+  <ul>
+    <li><a href="http://127.0.0.1:80">Lighttpd with PHP support and WordPress</a></li>
+    <li><a href="http://127.0.0.1:81">phpMyAdmin for database administration</a></li>
+    <li>MariaDB</li>
+  </ul>
+  <h2>Database</h2>
+  <p>
+    In the MariaDB container the database location is /var/lib/mysql.
+    It is configured as volume to make the data persistent.
+  </p>
+  <p>
+    The database engine has the following configuration:
+  </p>
+  <table class="FramedTable">
+    <tr><th>Port</th><td>3306</td></tr>
+    <tr><th>User</th><td>root</td></tr>
+    <tr><th>Password</th><td>root</td></tr>
+  </table>
+  <h2>Copyright</h2>
+  <p>
+    Copyright © 2020 Dipl.-Ing. (BA) Steffen Liersch<br>
+    <a href="http://www.steffen-liersch.de/">http://www.steffen-liersch.de/</a>
+  </p>
+</body>
+</html>

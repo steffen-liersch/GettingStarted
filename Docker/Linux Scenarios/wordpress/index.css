@@ -1,0 +1,11 @@
+html, body { margin: 0; }
+body { margin: 1em; }
+html { font-family: Calibri; font-size: 12pt; background: #fff; color: #333; }
+
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.2em; }
+h1, h2, h3, p, table { margin: 0.5em 0; }
+
+table.FramedTable { border-collapse: collapse; }
+table.FramedTable th, table.FramedTable td { border: 1px solid #cbcbcb; padding: 0.2em 0.4em; text-align: left; }
