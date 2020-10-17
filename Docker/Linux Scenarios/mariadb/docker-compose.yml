@@ -18,7 +18,7 @@ services:
       - mariadb
     environment:
       - PMA_ARBITRARY=1
-      - PMA_HOST=mariadb
+      - PMA_HOST=mariadb:3306
     ports:
       - 127.0.0.1:8001:80
 
