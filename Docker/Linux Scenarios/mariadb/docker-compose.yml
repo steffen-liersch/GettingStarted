@@ -3,7 +3,6 @@ version: "3.1"
 services:
   mariadb:
     image: mariadb
-    container_name: database
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -14,7 +13,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin
-    container_name: admin1
     restart: always
     depends_on:
       - mariadb
@@ -26,7 +24,6 @@ services:
 
   adminer:
     image: adminer
-    container_name: admin2
     restart: always
     depends_on:
       - mariadb
