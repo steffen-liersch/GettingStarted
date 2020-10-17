@@ -1,0 +1,39 @@
+version: "3.1"
+
+services:
+  mariadb:
+    image: mariadb
+    container_name: database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - data:/var/lib/mysql
+    ports:
+      - 127.0.0.1:3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: admin1
+    restart: always
+    depends_on:
+      - mariadb
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+    ports:
+      - 127.0.0.1:8001:80
+
+  adminer:
+    image: adminer
+    container_name: admin2
+    restart: always
+    depends_on:
+      - mariadb
+    environment:
+      - ADMINER_DEFAULT_SERVER=mariadb
+    ports:
+      - 127.0.0.1:8002:8080
+
+volumes:
+  data:
