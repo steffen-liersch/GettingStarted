@@ -11,6 +11,11 @@ set name=
 if "%name%"=="" (for %%f in ("%~dp0\.") do set name=%%~nxf)
 pushd "%~dp0"
 
+where /Q docker
+if not %ERRORLEVEL%==0 (echo The required "docker" utility is not installed. & goto error)
+docker ps -f "name=%name%"
+echo.
+
 echo [1] Build image "%name%" and start new container "%name%" interactive
 echo [2] Build image "%name%" and start new container "%name%"
 echo [3] Start container "%name%"
