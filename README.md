@@ -3,7 +3,7 @@
 GettingStarted is still under construction. The following topics are planned:
 
 - [x] [C#](CSharp)
-- [ ] [Docker](Docker)
+- [x] [Docker](Docker)
 - [ ] JavaScript
 - [ ] ...
 
