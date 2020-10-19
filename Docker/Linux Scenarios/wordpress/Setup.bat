@@ -26,6 +26,14 @@ goto end
 :start
 docker-compose down -t 0
 if not %ERRORLEVEL%==0 goto error
+
+set temp=lighttpd_wp\~wordpress.zip
+if not exist "%temp%" (
+  echo Downloading latest WordPress to "%temp%"...
+  powershell -Command Invoke-WebRequest 'https://wordpress.org/latest.zip' -OutFile '%temp%'
+  if not exist "%temp%" goto error
+)
+
 docker-compose up --build
 if not %ERRORLEVEL%==0 goto error
 goto end
