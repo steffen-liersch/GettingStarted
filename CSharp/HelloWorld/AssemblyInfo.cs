@@ -12,7 +12,7 @@
  */
 
 [assembly: AssemblyCompany("Steffen Liersch")]
-[assembly: AssemblyCopyright("© 2020 Dipl.-Ing. (BA) Steffen Liersch")]
+[assembly: AssemblyCopyright("© 2020 Steffen Liersch")]
 [assembly: AssemblyFileVersion("1.0.0")]
 [assembly: AssemblyInformationalVersion("1.0.0")] // See FileVersionInfo.ProductVersion
 [assembly: AssemblyProduct("HelloWorld")]

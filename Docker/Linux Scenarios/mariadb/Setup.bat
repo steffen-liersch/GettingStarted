@@ -1,7 +1,7 @@
 ::----------------------------------------------------------------------------
 ::
-:: Copyright © 2020 Dipl.-Ing. (BA) Steffen Liersch
-:: All rights reserved.
+::  Copyright © 2020 Steffen Liersch
+::  https://www.steffen-liersch.de/
 ::
 ::----------------------------------------------------------------------------
 

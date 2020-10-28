@@ -1,9 +1,9 @@
-<?php
-
-/**
- * @author Steffen Liersch <S.Liersch@gmx.de>
- * @copyright Copyright © 2020 Dipl.-Ing. (BA) Steffen Liersch
- */
+<?php /*--------------------------------------------------------------------*\
+::
+::  Copyright © 2020 Steffen Liersch
+::  https://www.steffen-liersch.de/
+::
+\*--------------------------------------------------------------------------*/
 
 (function()
 {

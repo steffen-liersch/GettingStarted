@@ -28,5 +28,5 @@ A very good integrated development environment is Visual Studio by Microsoft. Th
 
 ## Copyright
 
-Copyright © 2020 Dipl.-Ing. (BA) Steffen Liersch  
-http://www.steffen-liersch.de/
+Copyright © 2020 Steffen Liersch  
+https://www.steffen-liersch.de/
