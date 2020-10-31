@@ -26,16 +26,17 @@ RUN \
 # For testing only
 #RUN apk add bash mc nano; rm -rf /var/cache/apk/*
 
+# Add files
+COPY etc /etc
+COPY root /root
+COPY var /var
+
 # Configure Lighttpd
 RUN rm -rf /var/www/localhost
 RUN mkdir -p /run/lighttpd
 RUN adduser -DH -s /bin/false -G www-data www-data
 RUN chown www-data /run/lighttpd
-
-# Add files
-COPY etc /etc
-COPY root /root
-COPY var /var
+RUN chown -R www-data /var/www
 
 # Prepare the database and start the web server
 ENTRYPOINT \
